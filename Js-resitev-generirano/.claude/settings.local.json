@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl *)",
+      "Bash(python \"/c/Users/kleme/AppData/Local/Temp/claude/C--Diploma-Js-resitev-generirano/131d4b07-e0a1-457e-a81f-466b013406cd/scratchpad/gen_doc.py\")"
+    ]
+  }
+}

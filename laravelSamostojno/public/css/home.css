@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #1a1a1a;
+}
+.mainView {
+    display: flex;
+}
+
+.sidePanel {
+    width: 220px;
+    background-color: #fafafa;
+    border-right: 1px solid #eee;
+    padding: 20px 0;
+}
+.sidePanelLinks {
+    display: flex;
+    flex-direction: column;
+}
+.navLink {
+    text-decoration: none;
+    color: white;
+    background-color: #1a1a1a;
+    margin: 0 16px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.content {
+    flex: 1;
+    padding: 24px 40px;
+}
+.topbar {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+.topbar h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.courtsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+.courtCard {
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    height: 220px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    border: none;
+}
+.courtCard:hover {
+    background-color: #e4e4e4;
+}
+
+
+
+.modalOverlay.hidden {
+    display: none;
+}
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.modal {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    width: 350px;
+    max-width: 90%;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.modalClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+.modalClose:hover {
+    color: #1a1a1a;
+}
+#modalTitle {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+}
+#reservationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#reservationForm input,
+#reservationForm select {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+}
+#reservationForm input:focus,
+#reservationForm select:focus {
+    border-color: #333;
+}
+.formActions button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.formActions button:hover {
+    background-color: #333;
+}

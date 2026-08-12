@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rezervacija igrišč</title>
+  <link rel="stylesheet" href="/shared/nav.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <nav class="sidebar">
+      <div class="nav-links">
+        <a href="/" class="nav-link active">Rezervacije</a>
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <header class="topbar">
+        <h1>Rezervacija badminton igrišč</h1>
+      </header>
+
+      <main class="courts-grid" id="courts-grid"></main>
+    </div>
+  </div>
+
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal">
+      <button type="button" class="modal-close" id="modal-close">&times;</button>
+      <h2 id="modal-title">Rezervacija</h2>
+
+      <form id="reservation-form" class="form">
+        <input type="hidden" id="modal-court-id" />
+        <input type="text" id="modal-name" placeholder="Ime" required />
+        <input type="text" id="modal-surname" placeholder="Priimek" required />
+        <input type="email" id="modal-email" placeholder="Email" required />
+        <input type="date" id="modal-date" required />
+        <select id="modal-duration" required>
+          <option value="1">1 ura</option>
+          <option value="2">2 uri</option>
+        </select>
+        <select id="modal-start" required>
+          <option value="">Najprej izberi datum</option>
+        </select>
+        <div class="form-actions">
+          <button type="submit">Rezerviraj</button>
+        </div>
+        <p id="modal-message" class="message hidden"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

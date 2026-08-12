@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin panel</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header id="header">
+            <h1>Admin panel</h1>
+            <button id="LogoutButton">odjava</button>
+        </header>
+        <section class="cardsBody">
+            <div class="card">
+                <h2>Igrisca</h2>
+
+                <form id="courtForm">
+                    <input type="text" class="skritField" id="IdIgrisca" />
+                    <input
+                        type="number"
+                        id="stIgrisca"
+                        placeholder="Stevilka igrisca"
+                        required
+                    />
+                    <input
+                        type="text"
+                        id="PotDoSlike"
+                        placeholder="Pot do slike"
+                        required
+                    />
+                    <button types="submit" id="IgrisceSubmit">
+                        Dodaj igrisce
+                    </button>
+                </form>
+
+                <table class="courtsTable">
+                    <thead>
+                        <th>Stevilo igrisca</th>
+                        <th>Slika</th>
+                        <th>st rezervacij</th>
+                        <th>Akcije</th>
+                    </thead>
+                    <tbody id="courtsTableBody"></tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>Rezervacije</h2>
+                <form id="reservationForm">
+                    <input type="text" class="skritField" id="IdRezervacije" />
+                    <select id="IgrisceRezervacija">
+                        <option value="">izberi igrisce</option>
+                    </select>
+                    <input type="text" id="ImeRezervacija" placeholder="ime" />
+                    <input
+                        type="text"
+                        id="PriimekRezervacija"
+                        placeholder="priimek"
+                    />
+                    <input
+                        type="email"
+                        id="EmailRezervacija"
+                        placeholder="email"
+                    />
+                    <input type="date" id="DatumRezervacija" />
+                    <select id="TrajanjeRezervacija">
+                        <option value="1">1 ura</option>
+                        <option value="2">2 uri</option>
+                    </select>
+                    <select id="ZacetekRezervacija">
+                        <option value="">Prvo izberi igrisce in datum</option>
+                    </select>
+                    <button type="submit" id="RezervacijaSubmit">
+                        Dodaj rezervacijo
+                    </button>
+                </form>
+
+                <div class="filters">
+                    <select id="filterIgrisca">
+                        <option value="">Vsa igrišča</option>
+                    </select>
+                    <input
+                        type="text"
+                        id="filterSearch"
+                        placeholder="Išči po imenu ali priimku"
+                    />
+                </div>
+
+                <table class="reservationTable">
+                    <thead>
+                        <th>Igrisce</th>
+                        <th>Ime</th>
+                        <th>Priimek</th>
+                        <th>Email</th>
+                        <th>Datum</th>
+                        <th>Ura</th>
+                        <th>Akcije</th>
+                    </thead>
+                    <tbody id="reservationsTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 16px;
+  border-right: 1px solid #eee;
+  background: #fafafa;
+}
+
+.sidebar .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar .nav-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #2b2b2b;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sidebar .nav-link:hover {
+  background: #efefef;
+}
+
+.sidebar .nav-link.active {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+.sidebar .logout-btn {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #d33a3a;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(211, 58, 58, 0.25);
+}
+
+.sidebar .logout-btn:hover {
+  background: #c22f2f;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}

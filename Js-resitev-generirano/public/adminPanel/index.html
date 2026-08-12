@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Admin Panel</h1>
+    <button id="logout-btn" class="secondary">Odjava</button>
+  </header>
+
+  <main class="layout">
+    <section class="card" id="courts-section">
+      <h2>Igrišča</h2>
+
+      <form id="court-form" class="form">
+        <input type="hidden" id="court-id" />
+        <input type="number" id="court-number" placeholder="Številka igrišča" required />
+        <input type="text" id="court-image" placeholder="Pot do slike (npr. /images/court1.jpg)" />
+        <div class="form-actions">
+          <button type="submit" id="court-submit-btn">Dodaj igrišče</button>
+          <button type="button" id="court-cancel-btn" class="secondary hidden">Prekliči</button>
+        </div>
+      </form>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Številka</th>
+            <th>Slika</th>
+            <th>Št. rezervacij</th>
+            <th>Akcije</th>
+          </tr>
+        </thead>
+        <tbody id="courts-table-body"></tbody>
+      </table>
+    </section>
+
+    <section class="card" id="reservations-section">
+      <h2>Rezervacije</h2>
+
+      <form id="reservation-form" class="form">
+        <input type="hidden" id="reservation-id" />
+        <select id="reservation-court" required>
+          <option value="">Izberi igrišče</option>
+        </select>
+        <input type="text" id="reservation-name" placeholder="Ime" required />
+        <input type="text" id="reservation-surname" placeholder="Priimek" required />
+        <input type="email" id="reservation-email" placeholder="Email" required />
+        <input type="date" id="reservation-date" required />
+        <select id="reservation-duration" required>
+          <option value="1">1 ura</option>
+          <option value="2">2 uri</option>
+        </select>
+        <select id="reservation-start" required>
+          <option value="">Najprej izberi igrišče in datum</option>
+        </select>
+        <div class="form-actions">
+          <button type="submit" id="reservation-submit-btn">Dodaj rezervacijo</button>
+          <button type="button" id="reservation-cancel-btn" class="secondary hidden">Prekliči</button>
+        </div>
+      </form>
+
+      <div class="filters">
+        <select id="filter-court">
+          <option value="">Vsa igrišča</option>
+        </select>
+        <input type="text" id="filter-search" placeholder="Išči po imenu ali priimku" />
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Igrišče</th>
+            <th>Ime</th>
+            <th>Priimek</th>
+            <th>Email</th>
+            <th>Datum</th>
+            <th>Ura</th>
+            <th>Akcije</th>
+          </tr>
+        </thead>
+        <tbody id="reservations-table-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
